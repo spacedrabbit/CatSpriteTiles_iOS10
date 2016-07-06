@@ -43,6 +43,14 @@ class GameScene: SKScene {
   var landBackground:SKTileMapNode!
   var objectsTileMap:SKTileMapNode!
   
+  // sounds
+  lazy var duckSound:SKAction = {
+    return SKAction.playSoundFileNamed("Duck.wav", waitForCompletion: false)
+  }()
+  
+  lazy var gascanSound:SKAction = {
+    return SKAction.playSoundFileNamed("Gas.wav", waitForCompletion: false)
+  }()
 
   
   // MARK: - Setup
@@ -54,7 +62,8 @@ class GameScene: SKScene {
   }
   
   func loadSceneNodes() {
-    guard let car = childNode(withName: "car") as? SKSpriteNode,
+    guard
+      let car = childNode(withName: "car") as? SKSpriteNode,
       let landBackground = childNode(withName: "landBackground") as? SKTileMapNode,
       let objectsTileMap = childNode(withName: "objects") as? SKTileMapNode else {
       fatalError("Sprite Nodes not loaded")
@@ -110,13 +119,20 @@ class GameScene: SKScene {
     let column = landBackground.tileColumnIndex(fromPosition: position)
     let row = landBackground.tileRowIndex(fromPosition: position)
     
+    // setting speed based on tile car is on
     let tile = landBackground.tileDefinition(atColumn: column, row: row)
-    if tile == nil {
-      maxSpeed = waterMaxSpeed
-      print("water")
-    } else {
-      maxSpeed = landMaxSpeed
-      print("grass")
+    maxSpeed = tile == nil ? waterMaxSpeed : landMaxSpeed
+    
+    // add sounds
+    let objectTile = objectsTileMap.tileDefinition(atColumn: column, row: row)
+    if let _ = objectTile?.userData?.value(forKey: "gasCan") {
+      run(gascanSound)
+      objectsTileMap.setTileGroup(nil, forColumn: column, row: row)
+    }
+    
+    if let _ = objectTile?.userData?.value(forKey: "duck") {
+      run(duckSound)
+      objectsTileMap.setTileGroup(nil, forColumn: column, row: row)
     }
   }
   
