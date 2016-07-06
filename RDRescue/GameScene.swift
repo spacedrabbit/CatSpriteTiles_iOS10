@@ -41,6 +41,8 @@ class GameScene: SKScene {
   // Scene Nodes
   var car:SKSpriteNode!
   var landBackground:SKTileMapNode!
+  var objectsTileMap:SKTileMapNode!
+  
 
   
   // MARK: - Setup
@@ -48,13 +50,45 @@ class GameScene: SKScene {
     loadSceneNodes()
     physicsBody = SKPhysicsBody(edgeLoopFrom: frame)
     maxSpeed = landMaxSpeed
+    setupObjects()
   }
   
   func loadSceneNodes() {
-    guard let car = childNode(withName: "car") as? SKSpriteNode else {
+    guard let car = childNode(withName: "car") as? SKSpriteNode,
+      let landBackground = childNode(withName: "landBackground") as? SKTileMapNode,
+      let objectsTileMap = childNode(withName: "objects") as? SKTileMapNode else {
       fatalError("Sprite Nodes not loaded")
     }
+    
     self.car = car
+    self.landBackground = landBackground
+    self.objectsTileMap = objectsTileMap
+  }
+  
+  func setupObjects() {
+    let tileSet = objectsTileMap.tileSet
+    let tileGroups = tileSet.tileGroups
+
+    guard let duckTile = tileGroups.first(where: {$0.name == "Duck"}) else {
+      fatalError("No Duck tile definition found")
+    }
+    guard let gascanTile = tileGroups.first(where: {$0.name == "Gas Can"}) else {
+      fatalError("No Gas Can tile definition found")
+    }
+    
+    let numberOfObjects = 64
+    let columns = UInt32(objectsTileMap.numberOfColumns)
+    let rows = UInt32(objectsTileMap.numberOfRows)
+    
+    for _ in 1...numberOfObjects {
+      let column = Int(arc4random_uniform(columns))
+      let row = Int(arc4random_uniform(rows))
+      
+      let groundTile = landBackground.tileDefinition(atColumn: column, row: row)
+      let tile = groundTile == nil ? duckTile : gascanTile
+
+      objectsTileMap.setTileGroup(tile, forColumn: column, row: row)
+    }
   }
   
   
@@ -70,7 +104,20 @@ class GameScene: SKScene {
   }
   
   
+  // MARK: - Updates
   override func update(_ currentTime: TimeInterval) {
+    let position = car.position
+    let column = landBackground.tileColumnIndex(fromPosition: position)
+    let row = landBackground.tileRowIndex(fromPosition: position)
+    
+    let tile = landBackground.tileDefinition(atColumn: column, row: row)
+    if tile == nil {
+      maxSpeed = waterMaxSpeed
+      print("water")
+    } else {
+      maxSpeed = landMaxSpeed
+      print("grass")
+    }
   }
   
   override func didSimulatePhysics() {

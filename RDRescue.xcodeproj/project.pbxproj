@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		141B707D1D2D9020007985E8 /* Tiles.sks in Resources */ = {isa = PBXBuildFile; fileRef = 141B707C1D2D9020007985E8 /* Tiles.sks */; };
+		14BC76171D2D9BED00ACC6BD /* ObjectTiles.sks in Resources */ = {isa = PBXBuildFile; fileRef = 14BC76161D2D9BED00ACC6BD /* ObjectTiles.sks */; };
 		822F87111D156DCC00601A40 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822F87101D156DCC00601A40 /* AppDelegate.swift */; };
 		822F87131D156DCC00601A40 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 822F87121D156DCC00601A40 /* GameScene.sks */; };
 		822F87171D156DCC00601A40 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822F87161D156DCC00601A40 /* GameScene.swift */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		141B707C1D2D9020007985E8 /* Tiles.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Tiles.sks; sourceTree = "<group>"; };
+		14BC76161D2D9BED00ACC6BD /* ObjectTiles.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = ObjectTiles.sks; sourceTree = "<group>"; };
 		822F870D1D156DCC00601A40 /* RDRescue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RDRescue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		822F87101D156DCC00601A40 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		822F87121D156DCC00601A40 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 				822F87181D156DCC00601A40 /* GameViewController.swift */,
 				822F87121D156DCC00601A40 /* GameScene.sks */,
 				822F87161D156DCC00601A40 /* GameScene.swift */,
+				14BC76161D2D9BED00ACC6BD /* ObjectTiles.sks */,
 				141B707C1D2D9020007985E8 /* Tiles.sks */,
 				141B707B1D2D8D36007985E8 /* Supporting Files */,
 				822F872D1D15782000601A40 /* Sounds */,
@@ -172,6 +175,7 @@
 				822F872F1D15783200601A40 /* Gas.wav in Resources */,
 				822F87131D156DCC00601A40 /* GameScene.sks in Resources */,
 				822F87311D15783600601A40 /* Duck.wav in Resources */,
+				14BC76171D2D9BED00ACC6BD /* ObjectTiles.sks in Resources */,
 				8279E65B1D165CE500D08CAF /* Assets.xcassets in Resources */,
 				822F87331D15783E00601A40 /* License.rtf in Resources */,
 				822F87211D156DCC00601A40 /* LaunchScreen.storyboard in Resources */,
