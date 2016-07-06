@@ -24,7 +24,7 @@ import SpriteKit
 import GameplayKit
 
 class GameScene: SKScene {
-  
+  // MARK: - Instance Properties
   // constants
   let waterMaxSpeed: CGFloat = 200
   let landMaxSpeed: CGFloat = 4000
@@ -40,7 +40,10 @@ class GameScene: SKScene {
   
   // Scene Nodes
   var car:SKSpriteNode!
+  var landBackground:SKTileMapNode!
 
+  
+  // MARK: - Setup
   override func didMove(to view: SKView) {
     loadSceneNodes()
     physicsBody = SKPhysicsBody(edgeLoopFrom: frame)
@@ -54,6 +57,8 @@ class GameScene: SKScene {
     self.car = car
   }
   
+  
+  // MARK: - Touch Overrides
   override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
     guard let touch = touches.first else { return }
     targetLocation = touch.location(in: self)

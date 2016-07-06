@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		141B707D1D2D9020007985E8 /* Tiles.sks in Resources */ = {isa = PBXBuildFile; fileRef = 141B707C1D2D9020007985E8 /* Tiles.sks */; };
 		822F87111D156DCC00601A40 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822F87101D156DCC00601A40 /* AppDelegate.swift */; };
 		822F87131D156DCC00601A40 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 822F87121D156DCC00601A40 /* GameScene.sks */; };
 		822F87171D156DCC00601A40 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822F87161D156DCC00601A40 /* GameScene.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		141B707C1D2D9020007985E8 /* Tiles.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Tiles.sks; sourceTree = "<group>"; };
 		822F870D1D156DCC00601A40 /* RDRescue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RDRescue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		822F87101D156DCC00601A40 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		822F87121D156DCC00601A40 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 				822F87181D156DCC00601A40 /* GameViewController.swift */,
 				822F87121D156DCC00601A40 /* GameScene.sks */,
 				822F87161D156DCC00601A40 /* GameScene.swift */,
+				141B707C1D2D9020007985E8 /* Tiles.sks */,
 				141B707B1D2D8D36007985E8 /* Supporting Files */,
 				822F872D1D15782000601A40 /* Sounds */,
 				822F87281D156F5F00601A40 /* Storyboards */,
@@ -165,6 +168,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				822F871C1D156DCC00601A40 /* Main.storyboard in Resources */,
+				141B707D1D2D9020007985E8 /* Tiles.sks in Resources */,
 				822F872F1D15783200601A40 /* Gas.wav in Resources */,
 				822F87131D156DCC00601A40 /* GameScene.sks in Resources */,
 				822F87311D15783600601A40 /* Duck.wav in Resources */,
@@ -302,13 +306,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = RDRescue/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.razeware.RDRescue;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "a9361027-03a7-4238-8e57-5db75373c3b8";
-				PROVISIONING_PROFILE_SPECIFIER = "4J728AFW6X/XC: *";
+				PROVISIONING_PROFILE = "446ee7d5-722c-4db1-8afe-1675c083f05d";
+				PROVISIONING_PROFILE_SPECIFIER = "3457AE227Q/Louis - Wild Card - Dev Provision Profile";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -317,13 +321,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = RDRescue/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.razeware.RDRescue;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "a9361027-03a7-4238-8e57-5db75373c3b8";
-				PROVISIONING_PROFILE_SPECIFIER = "4J728AFW6X/XC: *";
+				PROVISIONING_PROFILE = "446ee7d5-722c-4db1-8afe-1675c083f05d";
+				PROVISIONING_PROFILE_SPECIFIER = "3457AE227Q/Louis - Wild Card - Dev Provision Profile";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
