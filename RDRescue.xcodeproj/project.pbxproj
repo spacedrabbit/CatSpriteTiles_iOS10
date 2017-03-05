@@ -52,11 +52,22 @@
 		141B707B1D2D8D36007985E8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				822F87101D156DCC00601A40 /* AppDelegate.swift */,
 				8279E65A1D165CE500D08CAF /* Assets.xcassets */,
 				822F87221D156DCC00601A40 /* Info.plist */,
 				822F87321D15783E00601A40 /* License.rtf */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		14CCFFA31E6CBEB200133B55 /* Tile Maps */ = {
+			isa = PBXGroup;
+			children = (
+				822F87121D156DCC00601A40 /* GameScene.sks */,
+				14BC76161D2D9BED00ACC6BD /* ObjectTiles.sks */,
+				141B707C1D2D9020007985E8 /* Tiles.sks */,
+			);
+			name = "Tile Maps";
 			sourceTree = "<group>";
 		};
 		822F87041D156DCC00601A40 = {
@@ -78,12 +89,9 @@
 		822F870F1D156DCC00601A40 /* RDRescue */ = {
 			isa = PBXGroup;
 			children = (
-				822F87101D156DCC00601A40 /* AppDelegate.swift */,
-				822F87181D156DCC00601A40 /* GameViewController.swift */,
-				822F87121D156DCC00601A40 /* GameScene.sks */,
 				822F87161D156DCC00601A40 /* GameScene.swift */,
-				14BC76161D2D9BED00ACC6BD /* ObjectTiles.sks */,
-				141B707C1D2D9020007985E8 /* Tiles.sks */,
+				822F87181D156DCC00601A40 /* GameViewController.swift */,
+				14CCFFA31E6CBEB200133B55 /* Tile Maps */,
 				141B707B1D2D8D36007985E8 /* Supporting Files */,
 				822F872D1D15782000601A40 /* Sounds */,
 				822F87281D156F5F00601A40 /* Storyboards */,
@@ -136,13 +144,14 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Caroline Begbie";
 				TargetAttributes = {
 					822F870C1D156DCC00601A40 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 3E7TCD55JT;
 						DevelopmentTeamName = "Caroline Begbie";
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Manual;
 					};
 				};
@@ -232,8 +241,10 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -280,8 +291,10 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
